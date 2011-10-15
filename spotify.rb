@@ -28,5 +28,4 @@ class Spotify < Plugin
     SBApplication.applicationWithBundleIdentifier("com.spotify.client")
   end
 
-  
 end
