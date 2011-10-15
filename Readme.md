@@ -10,6 +10,13 @@ Play
   Spotify.play
 ```
 
+Pause
+=======
+
+``` ruby
+  Spotify.pause
+```
+
 Play/Pause
 =======
 
