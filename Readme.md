@@ -39,6 +39,7 @@ Previous Track
 ```
 
 Growl Current Track
+===================
 
 ``` ruby
   Spotify.current_track
