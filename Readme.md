@@ -38,6 +38,13 @@ Previous Track
   Spotify.previous
 ```
 
+Growl Current Track
+===================
+
+``` ruby
+  Spotify.current_track
+```
+
 Using with Keymando
 =======
 
@@ -46,6 +53,7 @@ Using with Keymando
     input(
       "sn" => lambda { Spotify.next },
       "sp" => lambda { Spotify.play_pause }
+      "ct" => lambda { Spotify.current_track }
     )
   end
 ```

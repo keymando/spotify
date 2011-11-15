@@ -2,8 +2,8 @@ framework 'ScriptingBridge'
 
 class Spotify < Plugin
 
-  requires_version '1.0.3' 
-  
+  requires_version '1.0.3'
+
   def self.play
     app.play
   end
@@ -22,6 +22,11 @@ class Spotify < Plugin
 
   def self.previous
     app.previousTrack
+  end
+
+  def self.current_track
+    t = app.currentTrack
+    `/usr/local/bin/growlnotify -a Spotify -t "#{t.name}" -m "#{t.artist}\r#{t.album}"`
   end
 
   def self.app
