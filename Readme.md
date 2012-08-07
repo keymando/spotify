@@ -3,57 +3,29 @@ Spotify
 
 This is a Keymando plugin that provides Spotify access
 
-Play
+Methods
 =======
 
 ``` ruby
   Spotify.play
-```
-
-Pause
-=======
-
-``` ruby
   Spotify.pause
-```
-
-Play/Pause
-=======
-
-``` ruby
   Spotify.play_pause
-```
-
-Next Track
-=======
-
-``` ruby
+  Spotify.previous
   Spotify.next
 ```
 
-Previous Track
+Commands are now registered automatically
 =======
 
 ``` ruby
-  Spotify.previous
-```
-
-Growl Current Track
-===================
-
-``` ruby
-  Spotify.current_track
-```
-
-Using with Keymando
-=======
-
-``` ruby
-  map "<Cmd-y>" do 
-    input(
-      "sn" => lambda { Spotify.next },
-      "sp" => lambda { Spotify.play_pause }
-      "ct" => lambda { Spotify.current_track }
-    )
+  command "Spotify - Next Song" do
+    Spotify.next
   end
+```
+
+Using via Mappings
+=======
+
+``` ruby
+  map "<Cmd-Ctrl-p>" { Spotify.play_pause }
 ```
