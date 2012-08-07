@@ -34,3 +34,19 @@ class Spotify < Plugin
   end
 
 end
+
+command "Spotify - Next Song" do
+  Spotify.next
+end
+
+command "Spotify - Previous Song" do
+  Spotify.previous
+end
+
+command "Spotify - Current Track" do
+  Spotify.current_track
+end
+
+command "Spotify - Play/Pause" do
+  Spotify.play_pause
+end
